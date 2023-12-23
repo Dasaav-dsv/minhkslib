@@ -9,6 +9,6 @@ int __declspec(dllexport) luaopen_minlualib(lua_State* L) {
     const luaL_reg* exports = getLuaExports();
     hksI_openlib_fn f = NULL;
     fnptrInit(HKSI_OPENLIB_IBO, (void**)&f);
-    f(L, "minlualib", exports, 0);
+    f(L, "minhkslib", exports, 0);
     return 1;
 }
